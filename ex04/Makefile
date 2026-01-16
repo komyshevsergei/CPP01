@@ -6,7 +6,7 @@
 #    By: skomyshe <skomyshe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/15 20:21:37 by skomyshe          #+#    #+#              #
-#    Updated: 2026/01/16 18:39:39 by skomyshe         ###   ########.fr        #
+#    Updated: 2026/01/16 21:54:51 by skomyshe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = raplace
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++17
 
-SRCS = main.cpp
+SRCS = main.cpp replace.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

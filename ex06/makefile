@@ -1,36 +1,32 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: skomyshe <skomyshe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/01/14 23:04:31 by skomyshe          #+#    #+#              #
-#    Updated: 2026/01/18 00:11:50 by skomyshe         ###   ########.fr        #
+#    Created: 2026/01/17 01:49:53 by skomyshe          #+#    #+#              #
+#    Updated: 2026/01/17 01:50:12 by skomyshe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ref
+NAME = harlFilter
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-
-SRCS = main.cpp
-OBJS = $(SRCS:.cpp=.o)
+SRC = main.cpp Harl.cpp
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-party:
-	@curl parrot.live
-
-.PHONY: all clean fclean re party
+.PHONY: all clean fclean re
